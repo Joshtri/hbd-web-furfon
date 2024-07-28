@@ -2,6 +2,7 @@ let tapCount = 0;
 const candle = document.getElementById('candle');
 const flame = document.getElementById('flame');
 const message = document.getElementById('message');
+const celebrationSound = document.getElementById('celebrationSound');
 
 candle.addEventListener('click', () => {
     tapCount++;
@@ -13,6 +14,7 @@ candle.addEventListener('click', () => {
             candle.textContent = '🎂';
             message.textContent = 'Mat ulang tahun..🥰😇🥳';
             flame.classList.remove('blowout');
+            celebrationSound.play(); // Putar audio saat selesai tap
         }, 1000);
     } else {
         message.textContent = 'Lilin wes mati. Mat ulang tahun 🥰😇🥳';

@@ -16,13 +16,20 @@
 </head>
 <body class="animate__animated animate__fadeIn">
 
+    <style>
+        audio {
+            display: none; /* Menyembunyikan elemen audio jika tidak ingin ditampilkan di UI */
+        }
+
+    </style>
+
     <div style="margin-top: 50px;">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/fl4B-yIc6_A?autoplay=1&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay" allowfullscreen></iframe>
     </div>
-        
+
         
   <div class="intro">
-    <h1>Happy Birthday Tesa</h1>
+    <h1>Happy Birthday Tesa 🎉</h1>
     <div class="card-quote">
         <p class="quote">"Today is the oldest you have been and the youngest you'll ever be again" ~Eleanor Roosevelt</p>
       </div>
@@ -64,6 +71,9 @@
             <button class="close-button" id="closeModalBtn">Tutup</button>
         </div>
     </div>
+
+
+    <audio id="celebrationSound" src="/congratulation.mp3"></audio>
 
 
   <canvas id="confetti-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;"></canvas>
