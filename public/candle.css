@@ -1,0 +1,41 @@
+.cake {
+    text-align: center;
+    margin-top: 20px;
+}
+.candle {
+    position: relative;
+    font-size: 100px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.candle:active {
+    transform: scale(1.2);
+}
+.flame {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 30px;
+    background: radial-gradient(circle, yellow 30%, orange 60%, red 90%);
+    border-radius: 50%;
+    opacity: 1;
+    transition: opacity 0.5s;
+    animation: flicker 0.1s infinite alternate;
+}
+@keyframes flicker {
+    from { transform: translateX(-50%) rotate(-2deg); }
+    to { transform: translateX(-50%) rotate(2deg); }
+}
+#message {
+    margin-top: 20px;
+    font-size: 24px;
+}
+@keyframes blowout {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+.blowout {
+    animation: blowout 1s forwards;
+}
