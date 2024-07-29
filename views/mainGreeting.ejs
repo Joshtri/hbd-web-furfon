@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= title %></title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -16,16 +17,15 @@
 </head>
 <body class="animate__animated animate__fadeIn">
 
-    <style>
-        audio {
-            display: none; /* Menyembunyikan elemen audio jika tidak ingin ditampilkan di UI */
-        }
+  <style>
+    audio {
+        display: none; /* Menyembunyikan elemen audio jika tidak ingin ditampilkan di UI */
+    }
+  </style>
 
-    </style>
-
-    <div style="margin-top: 50px;">
-        <iframe width="379" height="315" src="https://www.youtube.com/embed/fl4B-yIc6_A?autoplay=1&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay" allowfullscreen></iframe>
-    </div>
+  <div style="margin-top: 50px;">
+      <iframe width="379" height="315" src="https://www.youtube.com/embed/fl4B-yIc6_A?autoplay=1&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay" allowfullscreen></iframe>
+  </div>
 
         
   <div class="intro">
@@ -62,19 +62,19 @@
         <p>tekan tombol buat cek kado</p>
         <button class="styled-button" id="openModalBtn">Cek Kadoo 📦🎁🧧</button>
     </div>
-</div>
+  </div>
 
-    <div class="modal" id="myModal">
-        <div class="modal-content">
-            <p style="color: black;">Selamat! Kamu mendapatkan kado spesial 🎉🎁</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.64055269812!2d106.87755323697886!3d-6.143105637249257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5eb134e3aab%3A0xeef99719b09b560e!2sDC%20J%26T%20Express%20Sunter!5e0!3m2!1sen!2sid!4v1722186836591!5m2!1sen!2sid" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <p style="color: black;">PAKETNYA MASIH ON THE WAY</P>
-            <button class="close-button" id="closeModalBtn">Tutup</button>
-        </div>
-    </div>
+  <div class="modal" id="myModal">
+      <div class="modal-content">
+          <p style="color: black;">Selamat! Kamu mendapatkan kado spesial 🎉🎁</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.64055269812!2d106.87755323697886!3d-6.143105637249257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5eb134e3aab%3A0xeef99719b09b560e!2sDC%20J%26T%20Express%20Sunter!5e0!3m2!1sen!2sid!4v1722186836591!5m2!1sen!2sid" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p style="color: black;">PAKETNYA MASIH ON THE WAY</P>
+          <button class="close-button" id="closeModalBtn">Tutup</button>
+      </div>
+  </div>
 
 
-    <audio id="celebrationSound" src="/congratulation.mp3"></audio>
+  <audio id="celebrationSound" src="/congratulation.mp3"></audio>
 
 
   <canvas id="confetti-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;"></canvas>
@@ -84,25 +84,25 @@
   </button>
 
 
-    <script>
-        const openModalBtn = document.getElementById('openModalBtn');
-        const closeModalBtn = document.getElementById('closeModalBtn');
-        const modal = document.getElementById('myModal');
+  <!-- <script>
+      const openModalBtn = document.getElementById('openModalBtn');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const modal = document.getElementById('myModal');
 
-        openModalBtn.addEventListener('click', () => {
-            modal.style.display = 'flex';
-        });
+      openModalBtn.addEventListener('click', () => {
+          modal.style.display = 'flex';
+      });
 
-        closeModalBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
+      closeModalBtn.addEventListener('click', () => {
+          modal.style.display = 'none';
+      });
 
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-    </script>
+      window.addEventListener('click', (event) => {
+          if (event.target === modal) {
+              modal.style.display = 'none';
+          }
+      });
+  </script> -->
 
   <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
   <script src="/script.js"></script>
